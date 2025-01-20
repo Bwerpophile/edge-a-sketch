@@ -24,6 +24,8 @@ body.appendChild(btnContainer);
 let squareDiv = function (gridNumber) {
     const container = document.createElement('div');
     container.classList.add('container');
+    container.style.height = '100vh';
+    container.style.width = '100vw';
 
     const existingContainer = document.querySelector('.container');
     if (existingContainer) {
@@ -47,14 +49,14 @@ let squareDiv = function (gridNumber) {
     
         const divSquare = document.createElement('div');
         divSquare.classList.add('divsquare');
-        divSquare.innerText = "heho";
+       // divSquare.innerText = "heho";
     
         container.appendChild(divSquare);
         let widthSquare =  100 / gridNumber;
-        console.log(widthSquare);
         divSquare.style.width = `${widthSquare}%`;
         divSquare.style.backgroundColor = 'blue';
         divSquare.style.height = `${widthSquare}%`;
+        //divSquare.style.
 
        divSquare.addEventListener("mouseenter", () => {
             divSquare.style.backgroundColor = 'red';
